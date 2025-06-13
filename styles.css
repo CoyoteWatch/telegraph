@@ -1,0 +1,240 @@
+:root {
+    --primary: #0088cc;
+    --primary-dark: #006699;
+    --secondary: #2c3e50;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --gray: #95a5a6;
+    --bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --highlight: #0088cc;
+    --font-main: 'Montserrat', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark);
+    background-color: var(--bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,136,204,0.1) 0%, rgba(44,62,80,0.1) 100%);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 80px 0 40px;
+    text-align: center;
+    color: var(--dark);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--highlight);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.steps {
+    list-style: none;
+    counter-reset: step-counter;
+}
+
+.step-item {
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 60px;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: var(--font-mono);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content code {
+    background: rgba(0, 136, 204, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    color: var(--primary-dark);
+}
+
+.telegram-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.telegram-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.feature {
+    margin-top: 20px;
+}
+
+.feature p {
+    margin-bottom: 20px;
+}
+
+.screenshot-placeholder {
+    background: rgba(0, 136, 204, 0.05);
+    border: 2px dashed var(--gray);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    color: var(--gray);
+    margin-top: 20px;
+}
+
+.screenshot-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta h2 {
+    margin-bottom: 30px;
+    color: var(--dark);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.telegram-btn {
+    background: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.telegram-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 136, 204, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .card {
+        padding: 25px;
+    }
+    
+    .step-item {
+        padding-left: 50px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+    }
+  } 
